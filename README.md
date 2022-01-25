@@ -1,4 +1,6 @@
-# The Ultimate tool for Team Build and Productivity running on Blockchain.
+# World of Hackathon Wingbirds
+
+> web3's newest trusty tool for hackthon team building.
 
 ### Prerequisites.
 
