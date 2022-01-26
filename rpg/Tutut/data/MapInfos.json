@@ -1,0 +1,6 @@
+[
+null,
+{"id":1,"expanded":true,"name":"Field Map","order":1,"parentId":0,"scrollX":816,"scrollY":640},
+{"id":2,"expanded":true,"name":"Normal Town","order":2,"parentId":1,"scrollX":1485.6,"scrollY":836.4},
+{"id":3,"expanded":false,"name":"Stone Cave","order":3,"parentId":2,"scrollX":1063.2,"scrollY":1095.6}
+]
