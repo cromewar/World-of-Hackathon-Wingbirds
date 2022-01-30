@@ -20,15 +20,48 @@ contract Wingbird is Ownable {
         PURPLE
     }
 
+    struct BirdHonors {
+        uint256 OwlPoints;
+        uint256 EaglePoints;
+        uint256 PeacockPoints;
+        uint256 HummingbirdPoints;
+        uint256 PenguinPoints;
+    }
+
+    enum BirdRoles {
+        EAGLE,
+        OWL,
+        PEACOCK,
+        PENGUIN,
+        HUMMINGBIRD
+    }
+
+    struct IpfsInfo {
+        string ipfs_cid;
+        address[] _birds;
+    }
+
+    BirdRoles birds;
+
+    address[] totalBirdsOnPlatform;
+
     // Mappings for different dataTypes
     mapping(address => Bird) birdsOnThePlatform;
     mapping(uint256 => EggColors) public colorIdToEgg;
     mapping(address => uint256) public birdSeeds;
+    mapping(address => BirdHonors) birdHonor;
+    mapping(string => IpfsInfo) ipfsCids;
 
     //events
     event userCreated(address _userAddress);
     event userFunded(address _userAddress, uint256 _amount);
     event honorSent(uint256 _amount);
+    // phase1
+    // NOTE: Which other parameters the emet should emit?
+    event missionOneCompleted(string _ipfs_cid);
+    event missionTwoConsensusCompleted(string _ipfs_cid, bool _consensus);
+
+    //events for storage phase1
 
     // Creates user passing the chosen nickname, the address, the color of the egg.
     // The IMG should be URL stored on IPFS
@@ -44,6 +77,7 @@ contract Wingbird is Ownable {
         birdsOnThePlatform[_userAddress] = user;
         BirdHonors memory birdHonors = BirdHonors(0, 0, 0, 0, 0);
         birdHonor[_userAddress] = birdHonors;
+        totalBirdsOnPlatform.push(_userAddress);
         emit userCreated(_userAddress);
     }
 
@@ -70,29 +104,65 @@ contract Wingbird is Ownable {
         return colorIdToEgg[_color];
     }
 
+    function getTotalBirds() public view returns (uint256) {
+        return totalBirdsOnPlatform.length;
+    }
+
     // PHASE 1 PVP AND HONOR SYSTEM, and Honor Getting
-    struct BirdHonors {
-        uint256 OwlPoints;
-        uint256 EaglePoints;
-        uint256 PeacockPoints;
-        uint256 HummingbirdPoints;
-        uint256 PenguinPoints;
+
+    function syncSenses(
+        string memory _ipfs_cid_mission1,
+        address[] memory _birds
+    ) public {
+        require(
+            checkAddress(msg.sender, _birds) == true,
+            "User does not exists on the group"
+        );
+        IpfsInfo memory newCid = IpfsInfo(_ipfs_cid_mission1, _birds);
+        ipfsCids[_ipfs_cid_mission1] = newCid;
+        emit missionOneCompleted(_ipfs_cid_mission1);
     }
 
-    enum BirdRoles {
-        EAGLE,
-        OWL,
-        PEACOCK,
-        PENGUIN,
-        HUMMINGBIRD
+    function reachConsensus(
+        bool _consensusReached,
+        string memory _ipfs_cid_mission2,
+        address[] memory _birds
+    ) public {
+        require(
+            checkAddress(msg.sender, _birds) == true,
+            "User does not exists on the group"
+        );
+        require(_consensusReached == true, "Consensus not reached");
+        IpfsInfo memory newCid = IpfsInfo(_ipfs_cid_mission2, _birds);
+        ipfsCids[_ipfs_cid_mission2] = newCid;
+        emit missionTwoConsensusCompleted(
+            _ipfs_cid_mission2,
+            _consensusReached
+        );
     }
 
-    BirdRoles birds;
+    function getIpfsObject(string memory _cid)
+        public
+        view
+        returns (IpfsInfo memory)
+    {
+        return ipfsCids[_cid];
+    }
 
-    //Mappings
-    mapping(address => BirdHonors) birdHonor;
-
-    //functions
+    // check if the address on a given array
+    function checkAddress(address _userAddres, address[] memory _users)
+        internal
+        pure
+        returns (bool)
+    {
+        bool exist = false;
+        for (uint256 i = 0; i < _users.length; i++) {
+            if (_users[i] == _userAddres) {
+                exist = true;
+            }
+        }
+        return exist;
+    }
 
     // Spend token for honor system.
     // NOTE: should also replace with actual ERC20 token.
@@ -126,4 +196,7 @@ contract Wingbird is Ownable {
     {
         return birdHonor[_bird];
     }
+
+    // Interaction storage functions for IPFS
+    function syncSensens() public {}
 }
