@@ -5,3 +5,4 @@ __pycache__
 build/
 reports/
 .vscode
+front_end/node_modules/
