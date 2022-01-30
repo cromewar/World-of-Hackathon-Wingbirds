@@ -1,0 +1,5426 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "linkAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "keyHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "seed",
+          "type": "uint256"
+        }
+      ],
+      "name": "RandomnessRequest",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "LINK",
+      "outputs": [
+        {
+          "internalType": "contract LinkTokenInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "requestId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "randomness",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "consumerContract",
+          "type": "address"
+        }
+      ],
+      "name": "callBackWithRandomness",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onTokenTransfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "2": "/home/cromewar/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@0.3.1/contracts/src/v0.8/VRFConsumerBase.sol",
+    "3": "/home/cromewar/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@0.3.1/contracts/src/v0.8/VRFRequestIDBase.sol",
+    "4": "/home/cromewar/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@0.3.1/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
+    "6": "contracts/test/VRFCoordinatorMock.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/test/VRFCoordinatorMock.sol",
+    "exportedSymbols": {
+      "LinkTokenInterface": [
+        989
+      ],
+      "VRFConsumerBase": [
+        894
+      ],
+      "VRFCoordinatorMock": [
+        668
+      ],
+      "VRFRequestIDBase": [
+        1061
+      ]
+    },
+    "id": 669,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 551,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:6"
+      },
+      {
+        "absolutePath": "/home/cromewar/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@0.3.1/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
+        "file": "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
+        "id": 552,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 669,
+        "sourceUnit": 990,
+        "src": "57:73:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/cromewar/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@0.3.1/contracts/src/v0.8/VRFConsumerBase.sol",
+        "file": "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol",
+        "id": 553,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 669,
+        "sourceUnit": 895,
+        "src": "131:59:6",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "VRFCoordinatorMock",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 668,
+        "linearizedBaseContracts": [
+          668
+        ],
+        "name": "VRFCoordinatorMock",
+        "nameLocation": "201:18:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "1b6b6d23",
+            "id": 556,
+            "mutability": "mutable",
+            "name": "LINK",
+            "nameLocation": "252:4:6",
+            "nodeType": "VariableDeclaration",
+            "scope": 668,
+            "src": "226:30:6",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+              "typeString": "contract LinkTokenInterface"
+            },
+            "typeName": {
+              "id": 555,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 554,
+                "name": "LinkTokenInterface",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 989,
+                "src": "226:18:6"
+              },
+              "referencedDeclaration": 989,
+              "src": "226:18:6",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                "typeString": "contract LinkTokenInterface"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 564,
+            "name": "RandomnessRequest",
+            "nameLocation": "269:17:6",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 558,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "312:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 564,
+                  "src": "296:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 557,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 560,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "keyHash",
+                  "nameLocation": "344:7:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 564,
+                  "src": "328:23:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 559,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "328:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 562,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "seed",
+                  "nameLocation": "377:4:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 564,
+                  "src": "361:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 561,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:101:6"
+            },
+            "src": "263:125:6"
+          },
+          {
+            "body": {
+              "id": 575,
+              "nodeType": "Block",
+              "src": "427:55:6",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 573,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 569,
+                      "name": "LINK",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 556,
+                      "src": "437:4:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                        "typeString": "contract LinkTokenInterface"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 571,
+                          "name": "linkAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 566,
+                          "src": "463:11:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 570,
+                        "name": "LinkTokenInterface",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 989,
+                        "src": "444:18:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_LinkTokenInterface_$989_$",
+                          "typeString": "type(contract LinkTokenInterface)"
+                        }
+                      },
+                      "id": 572,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "444:31:6",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                        "typeString": "contract LinkTokenInterface"
+                      }
+                    },
+                    "src": "437:38:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                      "typeString": "contract LinkTokenInterface"
+                    }
+                  },
+                  "id": 574,
+                  "nodeType": "ExpressionStatement",
+                  "src": "437:38:6"
+                }
+              ]
+            },
+            "id": 576,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 567,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 566,
+                  "mutability": "mutable",
+                  "name": "linkAddress",
+                  "nameLocation": "414:11:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 576,
+                  "src": "406:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 565,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "406:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "405:21:6"
+            },
+            "returnParameters": {
+              "id": 568,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "427:0:6"
+            },
+            "scope": 668,
+            "src": "394:88:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 607,
+              "nodeType": "Block",
+              "src": "608:143:6",
+              "statements": [
+                {
+                  "assignments": [
+                    588,
+                    590
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 588,
+                      "mutability": "mutable",
+                      "name": "keyHash",
+                      "nameLocation": "627:7:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 607,
+                      "src": "619:15:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      },
+                      "typeName": {
+                        "id": 587,
+                        "name": "bytes32",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "619:7:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 590,
+                      "mutability": "mutable",
+                      "name": "seed",
+                      "nameLocation": "644:4:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 607,
+                      "src": "636:12:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 589,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "636:7:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 600,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 593,
+                        "name": "_data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 582,
+                        "src": "663:5:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "components": [
+                          {
+                            "id": 595,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "671:7:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_bytes32_$",
+                              "typeString": "type(bytes32)"
+                            },
+                            "typeName": {
+                              "id": 594,
+                              "name": "bytes32",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "671:7:6",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          {
+                            "id": 597,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "680:7:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 596,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "680:7:6",
+                              "typeDescriptions": {}
+                            }
+                          }
+                        ],
+                        "id": 598,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "670:18:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_tuple$_t_type$_t_bytes32_$_$_t_type$_t_uint256_$_$",
+                          "typeString": "tuple(type(bytes32),type(uint256))"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_tuple$_t_type$_t_bytes32_$_$_t_type$_t_uint256_$_$",
+                          "typeString": "tuple(type(bytes32),type(uint256))"
+                        }
+                      ],
+                      "expression": {
+                        "id": 591,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "652:3:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 592,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "decode",
+                      "nodeType": "MemberAccess",
+                      "src": "652:10:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 599,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "652:37:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bytes32_$_t_uint256_$",
+                      "typeString": "tuple(bytes32,uint256)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "618:71:6"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 602,
+                        "name": "sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 578,
+                        "src": "722:6:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 603,
+                        "name": "keyHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 588,
+                        "src": "730:7:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 604,
+                        "name": "seed",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 590,
+                        "src": "739:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 601,
+                      "name": "RandomnessRequest",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 564,
+                      "src": "704:17:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bytes32_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,bytes32,uint256)"
+                      }
+                    },
+                    "id": 605,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "704:40:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 606,
+                  "nodeType": "EmitStatement",
+                  "src": "699:45:6"
+                }
+              ]
+            },
+            "functionSelector": "a4c0ed36",
+            "id": 608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 585,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 584,
+                  "name": "onlyLINK",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 667,
+                  "src": "599:8:6"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "599:8:6"
+              }
+            ],
+            "name": "onTokenTransfer",
+            "nameLocation": "497:15:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 583,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 578,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "530:6:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 608,
+                  "src": "522:14:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 577,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 580,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "554:3:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 608,
+                  "src": "546:11:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 579,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "546:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 582,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nameLocation": "580:5:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 608,
+                  "src": "567:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 581,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "567:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "512:79:6"
+            },
+            "returnParameters": {
+              "id": 586,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "608:0:6"
+            },
+            "scope": 668,
+            "src": "488:263:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 651,
+              "nodeType": "Block",
+              "src": "891:336:6",
+              "statements": [
+                {
+                  "assignments": [
+                    619
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 619,
+                      "mutability": "mutable",
+                      "name": "v",
+                      "nameLocation": "917:1:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 651,
+                      "src": "901:17:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_VRFConsumerBase_$894",
+                        "typeString": "contract VRFConsumerBase"
+                      },
+                      "typeName": {
+                        "id": 618,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 617,
+                          "name": "VRFConsumerBase",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 894,
+                          "src": "901:15:6"
+                        },
+                        "referencedDeclaration": 894,
+                        "src": "901:15:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_VRFConsumerBase_$894",
+                          "typeString": "contract VRFConsumerBase"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 620,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "901:17:6"
+                },
+                {
+                  "assignments": [
+                    622
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 622,
+                      "mutability": "mutable",
+                      "name": "resp",
+                      "nameLocation": "941:4:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 651,
+                      "src": "928:17:6",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 621,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "928:5:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 631,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "expression": {
+                            "id": 625,
+                            "name": "v",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 619,
+                            "src": "984:1:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_VRFConsumerBase_$894",
+                              "typeString": "contract VRFConsumerBase"
+                            }
+                          },
+                          "id": 626,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "rawFulfillRandomness",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 893,
+                          "src": "984:22:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
+                            "typeString": "function (bytes32,uint256) external"
+                          }
+                        },
+                        "id": 627,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "selector",
+                        "nodeType": "MemberAccess",
+                        "src": "984:31:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      {
+                        "id": 628,
+                        "name": "requestId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 610,
+                        "src": "1029:9:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "id": 629,
+                        "name": "randomness",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 612,
+                        "src": "1052:10:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 623,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "948:3:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 624,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encodeWithSelector",
+                      "nodeType": "MemberAccess",
+                      "src": "948:22:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithselector_pure$_t_bytes4_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes4) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 630,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "948:124:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "928:144:6"
+                },
+                {
+                  "assignments": [
+                    633
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 633,
+                      "mutability": "mutable",
+                      "name": "b",
+                      "nameLocation": "1090:1:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 651,
+                      "src": "1082:9:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 632,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1082:7:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 635,
+                  "initialValue": {
+                    "hexValue": "323036303030",
+                    "id": 634,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1094:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_206000_by_1",
+                      "typeString": "int_const 206000"
+                    },
+                    "value": "206000"
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1082:18:6"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 640,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 637,
+                            "name": "gasleft",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -7,
+                            "src": "1118:7:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_gasleft_view$__$returns$_t_uint256_$",
+                              "typeString": "function () view returns (uint256)"
+                            }
+                          },
+                          "id": 638,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1118:9:6",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "id": 639,
+                          "name": "b",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 633,
+                          "src": "1131:1:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1118:14:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "6e6f7420656e6f7567682067617320666f7220636f6e73756d6572",
+                        "id": 641,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1134:29:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c816b0be31b4ff6568775c57154270cb6742b4541711a582b675ea909198f4b7",
+                          "typeString": "literal_string \"not enough gas for consumer\""
+                        },
+                        "value": "not enough gas for consumer"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c816b0be31b4ff6568775c57154270cb6742b4541711a582b675ea909198f4b7",
+                          "typeString": "literal_string \"not enough gas for consumer\""
+                        }
+                      ],
+                      "id": 636,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1110:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 642,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1110:54:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 643,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1110:54:6"
+                },
+                {
+                  "assignments": [
+                    645,
+                    null
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 645,
+                      "mutability": "mutable",
+                      "name": "success",
+                      "nameLocation": "1180:7:6",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 651,
+                      "src": "1175:12:6",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 644,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1175:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    null
+                  ],
+                  "id": 650,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 648,
+                        "name": "resp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 622,
+                        "src": "1215:4:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 646,
+                        "name": "consumerContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 614,
+                        "src": "1193:16:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "id": 647,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "call",
+                      "nodeType": "MemberAccess",
+                      "src": "1193:21:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                      }
+                    },
+                    "id": 649,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1193:27:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                      "typeString": "tuple(bool,bytes memory)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1174:46:6"
+                }
+              ]
+            },
+            "functionSelector": "cf55fe97",
+            "id": 652,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callBackWithRandomness",
+            "nameLocation": "766:22:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 610,
+                  "mutability": "mutable",
+                  "name": "requestId",
+                  "nameLocation": "806:9:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 652,
+                  "src": "798:17:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 609,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "798:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 612,
+                  "mutability": "mutable",
+                  "name": "randomness",
+                  "nameLocation": "833:10:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 652,
+                  "src": "825:18:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 611,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "825:7:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 614,
+                  "mutability": "mutable",
+                  "name": "consumerContract",
+                  "nameLocation": "861:16:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 652,
+                  "src": "853:24:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 613,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "853:7:6",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "788:95:6"
+            },
+            "returnParameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "891:0:6"
+            },
+            "scope": 668,
+            "src": "757:470:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 666,
+              "nodeType": "Block",
+              "src": "1253:87:6",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 661,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 655,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1271:3:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 656,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "1271:10:6",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "arguments": [
+                            {
+                              "id": 659,
+                              "name": "LINK",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 556,
+                              "src": "1293:4:6",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                                "typeString": "contract LinkTokenInterface"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_LinkTokenInterface_$989",
+                                "typeString": "contract LinkTokenInterface"
+                              }
+                            ],
+                            "id": 658,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1285:7:6",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 657,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "1285:7:6",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 660,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1285:13:6",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "1271:27:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "4d75737420757365204c494e4b20746f6b656e",
+                        "id": 662,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1300:21:6",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e987a5305d985c4322166f34f5dcca15d7dfa4faebb15d40e05678e672e6a6a7",
+                          "typeString": "literal_string \"Must use LINK token\""
+                        },
+                        "value": "Must use LINK token"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e987a5305d985c4322166f34f5dcca15d7dfa4faebb15d40e05678e672e6a6a7",
+                          "typeString": "literal_string \"Must use LINK token\""
+                        }
+                      ],
+                      "id": 654,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1263:7:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 663,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1263:59:6",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 664,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1263:59:6"
+                },
+                {
+                  "id": 665,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1332:1:6"
+                }
+              ]
+            },
+            "id": 667,
+            "name": "onlyLINK",
+            "nameLocation": "1242:8:6",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 653,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1250:2:6"
+            },
+            "src": "1233:107:6",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 669,
+        "src": "192:1150:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1311:6"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506040516104a43803806104a483398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610411806100936000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80631b6b6d2314610046578063a4c0ed3614610075578063cf55fe971461008a575b600080fd5b600054610059906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61008861008336600461027c565b61009d565b005b610088610098366004610347565b61014c565b6000546001600160a01b031633146100f25760405162461bcd60e51b815260206004820152601360248201527226bab9ba103ab9b2902624a725903a37b5b2b760691b60448201526064015b60405180910390fd5b60008082806020019051810190610109919061037c565b915091508082866001600160a01b03167f7a9a0a6960d95b32cded93c30e63e7c2eb9e877230813c172110ea54dc1c915c60405160405180910390a45050505050565b604080516024810185905260448082018590528251808303909101815260649091019091526020810180516001600160e01b03166394985ddd60e01b179052600090620324b0805a10156101e25760405162461bcd60e51b815260206004820152601b60248201527f6e6f7420656e6f7567682067617320666f7220636f6e73756d6572000000000060448201526064016100e9565b6000846001600160a01b0316836040516101fc91906103a0565b6000604051808303816000865af19150503d8060008114610239576040519150601f19603f3d011682016040523d82523d6000602084013e61023e565b606091505b50505050505050505050565b80356001600160a01b038116811461026157600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060006060848603121561029157600080fd5b61029a8461024a565b925060208401359150604084013567ffffffffffffffff808211156102be57600080fd5b818601915086601f8301126102d257600080fd5b8135818111156102e4576102e4610266565b604051601f8201601f19908116603f0116810190838211818310171561030c5761030c610266565b8160405282815289602084870101111561032557600080fd5b8260208601602083013760006020848301015280955050505050509250925092565b60008060006060848603121561035c57600080fd5b83359250602084013591506103736040850161024a565b90509250925092565b6000806040838503121561038f57600080fd5b505080516020909101519092909150565b6000825160005b818110156103c157602081860181015185830152016103a7565b818111156103d0576000828501525b50919091019291505056fea2646970667358221220ee311ff5e96a26232f64d714c16d3d60656342680046d38a8949acd26a504bba64736f6c634300080b0033",
+  "bytecodeSha1": "50b10027797b93250cffdfccb9eaa7b52fcfd1b9",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "contractName": "VRFCoordinatorMock",
+  "coverageMap": {
+    "branches": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "6": {
+        "VRFCoordinatorMock.callBackWithRandomness": {
+          "2": [
+            1118,
+            1132,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "2": {},
+      "3": {},
+      "4": {},
+      "6": {
+        "VRFCoordinatorMock.callBackWithRandomness": {
+          "1": [
+            1110,
+            1164
+          ]
+        },
+        "VRFCoordinatorMock.onTokenTransfer": {
+          "0": [
+            699,
+            744
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/LinkTokenInterface",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/VRFConsumerBase",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/VRFRequestIDBase"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c80631b6b6d2314610046578063a4c0ed3614610075578063cf55fe971461008a575b600080fd5b600054610059906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61008861008336600461027c565b61009d565b005b610088610098366004610347565b61014c565b6000546001600160a01b031633146100f25760405162461bcd60e51b815260206004820152601360248201527226bab9ba103ab9b2902624a725903a37b5b2b760691b60448201526064015b60405180910390fd5b60008082806020019051810190610109919061037c565b915091508082866001600160a01b03167f7a9a0a6960d95b32cded93c30e63e7c2eb9e877230813c172110ea54dc1c915c60405160405180910390a45050505050565b604080516024810185905260448082018590528251808303909101815260649091019091526020810180516001600160e01b03166394985ddd60e01b179052600090620324b0805a10156101e25760405162461bcd60e51b815260206004820152601b60248201527f6e6f7420656e6f7567682067617320666f7220636f6e73756d6572000000000060448201526064016100e9565b6000846001600160a01b0316836040516101fc91906103a0565b6000604051808303816000865af19150503d8060008114610239576040519150601f19603f3d011682016040523d82523d6000602084013e61023e565b606091505b50505050505050505050565b80356001600160a01b038116811461026157600080fd5b919050565b634e487b7160e01b600052604160045260246000fd5b60008060006060848603121561029157600080fd5b61029a8461024a565b925060208401359150604084013567ffffffffffffffff808211156102be57600080fd5b818601915086601f8301126102d257600080fd5b8135818111156102e4576102e4610266565b604051601f8201601f19908116603f0116810190838211818310171561030c5761030c610266565b8160405282815289602084870101111561032557600080fd5b8260208601602083013760006020848301015280955050505050509250925092565b60008060006060848603121561035c57600080fd5b83359250602084013591506103736040850161024a565b90509250925092565b6000806040838503121561038f57600080fd5b505080516020909101519092909150565b6000825160005b818110156103c157602081860181015185830152016103a7565b818111156103d0576000828501525b50919091019291505056fea2646970667358221220ee311ff5e96a26232f64d714c16d3d60656342680046d38a8949acd26a504bba64736f6c634300080b0033",
+  "deployedSourceMap": "192:1150:6:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;226:30;;;;;-1:-1:-1;;;;;226:30:6;;;;;;-1:-1:-1;;;;;204:32:7;;;186:51;;174:2;159:18;226:30:6;;;;;;;488:263;;;;;;:::i;:::-;;:::i;:::-;;757:470;;;;;;:::i;:::-;;:::i;488:263::-;1293:4;;-1:-1:-1;;;;;1293:4:6;1271:10;:27;1263:59;;;;-1:-1:-1;;;1263:59:6;;2155:2:7;1263:59:6;;;2137:21:7;2194:2;2174:18;;;2167:30;-1:-1:-1;;;2213:18:7;;;2206:49;2272:18;;1263:59:6;;;;;;;;;619:15:::1;636:12:::0;663:5:::1;652:37;;;;;;;;;;;;:::i;:::-;618:71;;;;739:4;730:7;722:6;-1:-1:-1::0;;;;;704:40:6::1;;;;;;;;;;;608:143;;488:263:::0;;;:::o;757:470::-;948:124;;;;;;2725:25:7;;;2766:18;;;;2759:34;;;948:124:6;;;;;;;;;;2698:18:7;;;;948:124:6;;;;;;;;-1:-1:-1;;;;;948:124:6;-1:-1:-1;;;948:124:6;;;-1:-1:-1;;1094:6:6;;1118:9;:14;;1110:54;;;;-1:-1:-1;;;1110:54:6;;3006:2:7;1110:54:6;;;2988:21:7;3045:2;3025:18;;;3018:30;3084:29;3064:18;;;3057:57;3131:18;;1110:54:6;2804:351:7;1110:54:6;1175:12;1193:16;-1:-1:-1;;;;;1193:21:6;1215:4;1193:27;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;757:470:6:o;248:173:7:-;316:20;;-1:-1:-1;;;;;365:31:7;;355:42;;345:70;;411:1;408;401:12;345:70;248:173;;;:::o;426:127::-;487:10;482:3;478:20;475:1;468:31;518:4;515:1;508:15;542:4;539:1;532:15;558:1063;644:6;652;660;713:2;701:9;692:7;688:23;684:32;681:52;;;729:1;726;719:12;681:52;752:29;771:9;752:29;:::i;:::-;742:39;;828:2;817:9;813:18;800:32;790:42;;883:2;872:9;868:18;855:32;906:18;947:2;939:6;936:14;933:34;;;963:1;960;953:12;933:34;1001:6;990:9;986:22;976:32;;1046:7;1039:4;1035:2;1031:13;1027:27;1017:55;;1068:1;1065;1058:12;1017:55;1104:2;1091:16;1126:2;1122;1119:10;1116:36;;;1132:18;;:::i;:::-;1207:2;1201:9;1175:2;1261:13;;-1:-1:-1;;1257:22:7;;;1281:2;1253:31;1249:40;1237:53;;;1305:18;;;1325:22;;;1302:46;1299:72;;;1351:18;;:::i;:::-;1391:10;1387:2;1380:22;1426:2;1418:6;1411:18;1466:7;1461:2;1456;1452;1448:11;1444:20;1441:33;1438:53;;;1487:1;1484;1477:12;1438:53;1543:2;1538;1534;1530:11;1525:2;1517:6;1513:15;1500:46;1588:1;1583:2;1578;1570:6;1566:15;1562:24;1555:35;1609:6;1599:16;;;;;;;558:1063;;;;;:::o;1626:322::-;1703:6;1711;1719;1772:2;1760:9;1751:7;1747:23;1743:32;1740:52;;;1788:1;1785;1778:12;1740:52;1824:9;1811:23;1801:33;;1881:2;1870:9;1866:18;1853:32;1843:42;;1904:38;1938:2;1927:9;1923:18;1904:38;:::i;:::-;1894:48;;1626:322;;;;;:::o;2301:245::-;2380:6;2388;2441:2;2429:9;2420:7;2416:23;2412:32;2409:52;;;2457:1;2454;2447:12;2409:52;-1:-1:-1;;2480:16:7;;2536:2;2521:18;;;2515:25;2480:16;;2515:25;;-1:-1:-1;2301:245:7:o;3160:426::-;3289:3;3327:6;3321:13;3352:1;3362:129;3376:6;3373:1;3370:13;3362:129;;;3474:4;3458:14;;;3454:25;;3448:32;3435:11;;;3428:53;3391:12;3362:129;;;3509:6;3506:1;3503:13;3500:48;;;3544:1;3535:6;3530:3;3526:16;3519:27;3500:48;-1:-1:-1;3564:16:7;;;;;3160:426;-1:-1:-1;;3160:426:7:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    192,
+    1342
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x1B6B6D23 EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0xA4C0ED36 EQ PUSH2 0x75 JUMPI DUP1 PUSH4 0xCF55FE97 EQ PUSH2 0x8A JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SLOAD PUSH2 0x59 SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x88 PUSH2 0x83 CALLDATASIZE PUSH1 0x4 PUSH2 0x27C JUMP JUMPDEST PUSH2 0x9D JUMP JUMPDEST STOP JUMPDEST PUSH2 0x88 PUSH2 0x98 CALLDATASIZE PUSH1 0x4 PUSH2 0x347 JUMP JUMPDEST PUSH2 0x14C JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0xF2 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x13 PUSH1 0x24 DUP3 ADD MSTORE PUSH19 0x26BAB9BA103AB9B2902624A725903A37B5B2B7 PUSH1 0x69 SHL PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP1 DUP3 DUP1 PUSH1 0x20 ADD SWAP1 MLOAD DUP2 ADD SWAP1 PUSH2 0x109 SWAP2 SWAP1 PUSH2 0x37C JUMP JUMPDEST SWAP2 POP SWAP2 POP DUP1 DUP3 DUP7 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH32 0x7A9A0A6960D95B32CDED93C30E63E7C2EB9E877230813C172110EA54DC1C915C PUSH1 0x40 MLOAD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG4 POP POP POP POP POP JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x24 DUP2 ADD DUP6 SWAP1 MSTORE PUSH1 0x44 DUP1 DUP3 ADD DUP6 SWAP1 MSTORE DUP3 MLOAD DUP1 DUP4 SUB SWAP1 SWAP2 ADD DUP2 MSTORE PUSH1 0x64 SWAP1 SWAP2 ADD SWAP1 SWAP2 MSTORE PUSH1 0x20 DUP2 ADD DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xE0 SHL SUB AND PUSH4 0x94985DDD PUSH1 0xE0 SHL OR SWAP1 MSTORE PUSH1 0x0 SWAP1 PUSH3 0x324B0 DUP1 GAS LT ISZERO PUSH2 0x1E2 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1B PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x6E6F7420656E6F7567682067617320666F7220636F6E73756D65720000000000 PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD PUSH2 0xE9 JUMP JUMPDEST PUSH1 0x0 DUP5 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP4 PUSH1 0x40 MLOAD PUSH2 0x1FC SWAP2 SWAP1 PUSH2 0x3A0 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP7 GAS CALL SWAP2 POP POP RETURNDATASIZE DUP1 PUSH1 0x0 DUP2 EQ PUSH2 0x239 JUMPI PUSH1 0x40 MLOAD SWAP2 POP PUSH1 0x1F NOT PUSH1 0x3F RETURNDATASIZE ADD AND DUP3 ADD PUSH1 0x40 MSTORE RETURNDATASIZE DUP3 MSTORE RETURNDATASIZE PUSH1 0x0 PUSH1 0x20 DUP5 ADD RETURNDATACOPY PUSH2 0x23E JUMP JUMPDEST PUSH1 0x60 SWAP2 POP JUMPDEST POP POP POP POP POP POP POP POP POP POP JUMP JUMPDEST DUP1 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x261 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 POP JUMP JUMPDEST PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x41 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP5 DUP7 SUB SLT ISZERO PUSH2 0x291 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x29A DUP5 PUSH2 0x24A JUMP JUMPDEST SWAP3 POP PUSH1 0x20 DUP5 ADD CALLDATALOAD SWAP2 POP PUSH1 0x40 DUP5 ADD CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x2BE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 DUP7 ADD SWAP2 POP DUP7 PUSH1 0x1F DUP4 ADD SLT PUSH2 0x2D2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD DUP2 DUP2 GT ISZERO PUSH2 0x2E4 JUMPI PUSH2 0x2E4 PUSH2 0x266 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1F DUP3 ADD PUSH1 0x1F NOT SWAP1 DUP2 AND PUSH1 0x3F ADD AND DUP2 ADD SWAP1 DUP4 DUP3 GT DUP2 DUP4 LT OR ISZERO PUSH2 0x30C JUMPI PUSH2 0x30C PUSH2 0x266 JUMP JUMPDEST DUP2 PUSH1 0x40 MSTORE DUP3 DUP2 MSTORE DUP10 PUSH1 0x20 DUP5 DUP8 ADD ADD GT ISZERO PUSH2 0x325 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 PUSH1 0x20 DUP7 ADD PUSH1 0x20 DUP4 ADD CALLDATACOPY PUSH1 0x0 PUSH1 0x20 DUP5 DUP4 ADD ADD MSTORE DUP1 SWAP6 POP POP POP POP POP POP SWAP3 POP SWAP3 POP SWAP3 JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP5 DUP7 SUB SLT ISZERO PUSH2 0x35C JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP4 CALLDATALOAD SWAP3 POP PUSH1 0x20 DUP5 ADD CALLDATALOAD SWAP2 POP PUSH2 0x373 PUSH1 0x40 DUP6 ADD PUSH2 0x24A JUMP JUMPDEST SWAP1 POP SWAP3 POP SWAP3 POP SWAP3 JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x38F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP POP DUP1 MLOAD PUSH1 0x20 SWAP1 SWAP2 ADD MLOAD SWAP1 SWAP3 SWAP1 SWAP2 POP JUMP JUMPDEST PUSH1 0x0 DUP3 MLOAD PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x3C1 JUMPI PUSH1 0x20 DUP2 DUP7 ADD DUP2 ADD MLOAD DUP6 DUP4 ADD MSTORE ADD PUSH2 0x3A7 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x3D0 JUMPI PUSH1 0x0 DUP3 DUP6 ADD MSTORE JUMPDEST POP SWAP2 SWAP1 SWAP2 ADD SWAP3 SWAP2 POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xEE BALANCE 0x1F CREATE2 0xE9 PUSH11 0x26232F64D714C16D3D6065 PUSH4 0x42680046 0xD3 DUP11 DUP10 0x49 0xAC 0xD2 PUSH11 0x504BBA64736F6C63430008 SIGNEXTEND STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "CALLVALUE",
+      "path": "6"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "ISZERO",
+      "path": "6"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "REVERT",
+      "path": "6"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "CALLDATASIZE",
+      "path": "6"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "LT",
+      "path": "6"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "CALLDATALOAD",
+      "path": "6"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "SHR",
+      "path": "6"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH4",
+      "path": "6",
+      "value": "0x1B6B6D23"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "EQ",
+      "path": "6"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH4",
+      "path": "6",
+      "value": "0xA4C0ED36"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "EQ",
+      "path": "6"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x75"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH4",
+      "path": "6",
+      "value": "0xCF55FE97"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "EQ",
+      "path": "6"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x8A"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        192,
+        1342
+      ],
+      "op": "REVERT",
+      "path": "6"
+    },
+    "70": {
+      "offset": [
+        226,
+        256
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "SLOAD",
+      "path": "6"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x59"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "78": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "80": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "82": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "84": {
+      "op": "SHL"
+    },
+    "85": {
+      "op": "SUB"
+    },
+    "86": {
+      "offset": [
+        226,
+        256
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "92": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "93": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "95": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "97": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "99": {
+      "op": "SHL"
+    },
+    "100": {
+      "op": "SUB"
+    },
+    "101": {
+      "op": "SWAP1"
+    },
+    "102": {
+      "op": "SWAP2"
+    },
+    "103": {
+      "op": "AND"
+    },
+    "104": {
+      "op": "DUP2"
+    },
+    "105": {
+      "op": "MSTORE"
+    },
+    "106": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "108": {
+      "op": "ADD"
+    },
+    "109": {
+      "offset": [
+        226,
+        256
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "111": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "112": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "113": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "114": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "SUB",
+      "path": "6"
+    },
+    "115": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "116": {
+      "fn": null,
+      "offset": [
+        226,
+        256
+      ],
+      "op": "RETURN",
+      "path": "6"
+    },
+    "117": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "118": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x88"
+    },
+    "121": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x83"
+    },
+    "124": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "CALLDATASIZE",
+      "path": "6"
+    },
+    "125": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x4"
+    },
+    "127": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x27C"
+    },
+    "130": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "jump": "i",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "131": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "132": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x9D"
+    },
+    "135": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "jump": "i",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "136": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "137": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "STOP",
+      "path": "6"
+    },
+    "138": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "139": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x88"
+    },
+    "142": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x98"
+    },
+    "145": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "CALLDATASIZE",
+      "path": "6"
+    },
+    "146": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x4"
+    },
+    "148": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x347"
+    },
+    "151": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "jump": "i",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "152": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "153": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x14C"
+    },
+    "156": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "jump": "i",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "157": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "158": {
+      "offset": [
+        1293,
+        1297
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "160": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1293,
+        1297
+      ],
+      "op": "SLOAD",
+      "path": "6"
+    },
+    "161": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "163": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "165": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "167": {
+      "op": "SHL"
+    },
+    "168": {
+      "op": "SUB"
+    },
+    "169": {
+      "offset": [
+        1293,
+        1297
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "170": {
+      "offset": [
+        1271,
+        1281
+      ],
+      "op": "CALLER",
+      "path": "6"
+    },
+    "171": {
+      "offset": [
+        1271,
+        1298
+      ],
+      "op": "EQ",
+      "path": "6"
+    },
+    "172": {
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0xF2"
+    },
+    "175": {
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "176": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "178": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "179": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "183": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "185": {
+      "op": "SHL"
+    },
+    "186": {
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "187": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "188": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "190": {
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x4"
+    },
+    "192": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "193": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "194": {
+      "op": "MSTORE"
+    },
+    "195": {
+      "op": "PUSH1",
+      "value": "0x13"
+    },
+    "197": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "199": {
+      "op": "DUP3"
+    },
+    "200": {
+      "op": "ADD"
+    },
+    "201": {
+      "op": "MSTORE"
+    },
+    "202": {
+      "op": "PUSH19",
+      "value": "0x26BAB9BA103AB9B2902624A725903A37B5B2B7"
+    },
+    "222": {
+      "op": "PUSH1",
+      "value": "0x69"
+    },
+    "224": {
+      "op": "SHL"
+    },
+    "225": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "227": {
+      "op": "DUP3"
+    },
+    "228": {
+      "op": "ADD"
+    },
+    "229": {
+      "op": "MSTORE"
+    },
+    "230": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "232": {
+      "op": "ADD"
+    },
+    "233": {
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "234": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "236": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "237": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "238": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "239": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "SUB",
+      "path": "6"
+    },
+    "240": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "241": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "6"
+    },
+    "242": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        1263,
+        1322
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "243": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        619,
+        634
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "245": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        636,
+        648
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "246": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        663,
+        668
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "247": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "248": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x20"
+    },
+    "250": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "251": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "252": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "253": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "254": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "255": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "256": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x109"
+    },
+    "259": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "260": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "261": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x37C"
+    },
+    "264": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "jump": "i",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "265": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        652,
+        689
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "266": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        618,
+        689
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "267": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        618,
+        689
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "268": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        618,
+        689
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "269": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        618,
+        689
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "270": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        739,
+        743
+      ],
+      "op": "DUP1",
+      "path": "6",
+      "statement": 0
+    },
+    "271": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        730,
+        737
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "272": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        722,
+        728
+      ],
+      "op": "DUP7",
+      "path": "6"
+    },
+    "273": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "275": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "277": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "279": {
+      "op": "SHL"
+    },
+    "280": {
+      "op": "SUB"
+    },
+    "281": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "282": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "PUSH32",
+      "path": "6",
+      "value": "0x7A9A0A6960D95B32CDED93C30E63E7C2EB9E877230813C172110EA54DC1C915C"
+    },
+    "315": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "317": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "318": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "320": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "321": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "322": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "323": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "SUB",
+      "path": "6"
+    },
+    "324": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "325": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        704,
+        744
+      ],
+      "op": "LOG4",
+      "path": "6"
+    },
+    "326": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        608,
+        751
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "327": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        608,
+        751
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "328": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "329": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "330": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "331": {
+      "fn": "VRFCoordinatorMock.onTokenTransfer",
+      "jump": "o",
+      "offset": [
+        488,
+        751
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "332": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "333": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "335": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "336": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "337": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x24"
+    },
+    "339": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "340": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "341": {
+      "op": "DUP6"
+    },
+    "342": {
+      "op": "SWAP1"
+    },
+    "343": {
+      "op": "MSTORE"
+    },
+    "344": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "346": {
+      "op": "DUP1"
+    },
+    "347": {
+      "op": "DUP3"
+    },
+    "348": {
+      "op": "ADD"
+    },
+    "349": {
+      "op": "DUP6"
+    },
+    "350": {
+      "op": "SWAP1"
+    },
+    "351": {
+      "op": "MSTORE"
+    },
+    "352": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "353": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "354": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "355": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP4",
+      "path": "6"
+    },
+    "356": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SUB",
+      "path": "6"
+    },
+    "357": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "358": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "359": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "360": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "361": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "362": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "364": {
+      "op": "SWAP1"
+    },
+    "365": {
+      "op": "SWAP2"
+    },
+    "366": {
+      "op": "ADD"
+    },
+    "367": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "368": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "369": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "370": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x20"
+    },
+    "372": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "373": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "374": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "375": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "376": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "378": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "380": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "382": {
+      "op": "SHL"
+    },
+    "383": {
+      "op": "SUB"
+    },
+    "384": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "385": {
+      "op": "PUSH4",
+      "value": "0x94985DDD"
+    },
+    "390": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "392": {
+      "op": "SHL"
+    },
+    "393": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "OR",
+      "path": "6"
+    },
+    "394": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "395": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        948,
+        1072
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "396": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "398": {
+      "op": "SWAP1"
+    },
+    "399": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1094,
+        1100
+      ],
+      "op": "PUSH3",
+      "path": "6",
+      "value": "0x324B0"
+    },
+    "403": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1094,
+        1100
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "404": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1118,
+        1127
+      ],
+      "op": "GAS",
+      "path": "6",
+      "statement": 1
+    },
+    "405": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1118,
+        1132
+      ],
+      "op": "LT",
+      "path": "6"
+    },
+    "406": {
+      "branch": 2,
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1118,
+        1132
+      ],
+      "op": "ISZERO",
+      "path": "6"
+    },
+    "407": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x1E2"
+    },
+    "410": {
+      "branch": 2,
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "411": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "413": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "414": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "418": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "420": {
+      "op": "SHL"
+    },
+    "421": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "422": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "423": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "425": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x4"
+    },
+    "427": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "428": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "429": {
+      "op": "MSTORE"
+    },
+    "430": {
+      "op": "PUSH1",
+      "value": "0x1B"
+    },
+    "432": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "434": {
+      "op": "DUP3"
+    },
+    "435": {
+      "op": "ADD"
+    },
+    "436": {
+      "op": "MSTORE"
+    },
+    "437": {
+      "op": "PUSH32",
+      "value": "0x6E6F7420656E6F7567682067617320666F7220636F6E73756D65720000000000"
+    },
+    "470": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "472": {
+      "op": "DUP3"
+    },
+    "473": {
+      "op": "ADD"
+    },
+    "474": {
+      "op": "MSTORE"
+    },
+    "475": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "477": {
+      "op": "ADD"
+    },
+    "478": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0xE9"
+    },
+    "481": {
+      "op": "JUMP"
+    },
+    "482": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1110,
+        1164
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "483": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1175,
+        1187
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "485": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1209
+      ],
+      "op": "DUP5",
+      "path": "6"
+    },
+    "486": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "488": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "490": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "492": {
+      "op": "SHL"
+    },
+    "493": {
+      "op": "SUB"
+    },
+    "494": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1214
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "495": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1215,
+        1219
+      ],
+      "op": "DUP4",
+      "path": "6"
+    },
+    "496": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "498": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "499": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x1FC"
+    },
+    "502": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "503": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SWAP1",
+      "path": "6"
+    },
+    "504": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x3A0"
+    },
+    "507": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "jump": "i",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "508": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "509": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "511": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "513": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "514": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "515": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP4",
+      "path": "6"
+    },
+    "516": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SUB",
+      "path": "6"
+    },
+    "517": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "518": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "520": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP7",
+      "path": "6"
+    },
+    "521": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "GAS",
+      "path": "6"
+    },
+    "522": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "CALL",
+      "path": "6"
+    },
+    "523": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "524": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "525": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "526": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "6"
+    },
+    "527": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP1",
+      "path": "6"
+    },
+    "528": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "530": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP2",
+      "path": "6"
+    },
+    "531": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "EQ",
+      "path": "6"
+    },
+    "532": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x239"
+    },
+    "535": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMPI",
+      "path": "6"
+    },
+    "536": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "538": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "MLOAD",
+      "path": "6"
+    },
+    "539": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "540": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "541": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x1F"
+    },
+    "543": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "NOT",
+      "path": "6"
+    },
+    "544": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x3F"
+    },
+    "546": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "6"
+    },
+    "547": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "548": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "AND",
+      "path": "6"
+    },
+    "549": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "550": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "551": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x40"
+    },
+    "553": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "554": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "6"
+    },
+    "555": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP3",
+      "path": "6"
+    },
+    "556": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "MSTORE",
+      "path": "6"
+    },
+    "557": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "6"
+    },
+    "558": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x0"
+    },
+    "560": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x20"
+    },
+    "562": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "DUP5",
+      "path": "6"
+    },
+    "563": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "ADD",
+      "path": "6"
+    },
+    "564": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "6"
+    },
+    "565": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH2",
+      "path": "6",
+      "value": "0x23E"
+    },
+    "568": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "569": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "570": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "PUSH1",
+      "path": "6",
+      "value": "0x60"
+    },
+    "572": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "SWAP2",
+      "path": "6"
+    },
+    "573": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "POP",
+      "path": "6"
+    },
+    "574": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "offset": [
+        1193,
+        1220
+      ],
+      "op": "JUMPDEST",
+      "path": "6"
+    },
+    "575": {
+      "op": "POP"
+    },
+    "576": {
+      "op": "POP"
+    },
+    "577": {
+      "op": "POP"
+    },
+    "578": {
+      "op": "POP"
+    },
+    "579": {
+      "op": "POP"
+    },
+    "580": {
+      "op": "POP"
+    },
+    "581": {
+      "op": "POP"
+    },
+    "582": {
+      "op": "POP"
+    },
+    "583": {
+      "op": "POP"
+    },
+    "584": {
+      "op": "POP"
+    },
+    "585": {
+      "fn": "VRFCoordinatorMock.callBackWithRandomness",
+      "jump": "o",
+      "offset": [
+        757,
+        1227
+      ],
+      "op": "JUMP",
+      "path": "6"
+    },
+    "586": {
+      "op": "JUMPDEST"
+    },
+    "587": {
+      "op": "DUP1"
+    },
+    "588": {
+      "op": "CALLDATALOAD"
+    },
+    "589": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "591": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "593": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "595": {
+      "op": "SHL"
+    },
+    "596": {
+      "op": "SUB"
+    },
+    "597": {
+      "op": "DUP2"
+    },
+    "598": {
+      "op": "AND"
+    },
+    "599": {
+      "op": "DUP2"
+    },
+    "600": {
+      "op": "EQ"
+    },
+    "601": {
+      "op": "PUSH2",
+      "value": "0x261"
+    },
+    "604": {
+      "op": "JUMPI"
+    },
+    "605": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "607": {
+      "op": "DUP1"
+    },
+    "608": {
+      "op": "REVERT"
+    },
+    "609": {
+      "op": "JUMPDEST"
+    },
+    "610": {
+      "op": "SWAP2"
+    },
+    "611": {
+      "op": "SWAP1"
+    },
+    "612": {
+      "op": "POP"
+    },
+    "613": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "614": {
+      "op": "JUMPDEST"
+    },
+    "615": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "620": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "622": {
+      "op": "SHL"
+    },
+    "623": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "625": {
+      "op": "MSTORE"
+    },
+    "626": {
+      "op": "PUSH1",
+      "value": "0x41"
+    },
+    "628": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "630": {
+      "op": "MSTORE"
+    },
+    "631": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "633": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "635": {
+      "op": "REVERT"
+    },
+    "636": {
+      "op": "JUMPDEST"
+    },
+    "637": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "639": {
+      "op": "DUP1"
+    },
+    "640": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "642": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "644": {
+      "op": "DUP5"
+    },
+    "645": {
+      "op": "DUP7"
+    },
+    "646": {
+      "op": "SUB"
+    },
+    "647": {
+      "op": "SLT"
+    },
+    "648": {
+      "op": "ISZERO"
+    },
+    "649": {
+      "op": "PUSH2",
+      "value": "0x291"
+    },
+    "652": {
+      "op": "JUMPI"
+    },
+    "653": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "655": {
+      "op": "DUP1"
+    },
+    "656": {
+      "op": "REVERT"
+    },
+    "657": {
+      "op": "JUMPDEST"
+    },
+    "658": {
+      "op": "PUSH2",
+      "value": "0x29A"
+    },
+    "661": {
+      "op": "DUP5"
+    },
+    "662": {
+      "op": "PUSH2",
+      "value": "0x24A"
+    },
+    "665": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "666": {
+      "op": "JUMPDEST"
+    },
+    "667": {
+      "op": "SWAP3"
+    },
+    "668": {
+      "op": "POP"
+    },
+    "669": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "671": {
+      "op": "DUP5"
+    },
+    "672": {
+      "op": "ADD"
+    },
+    "673": {
+      "op": "CALLDATALOAD"
+    },
+    "674": {
+      "op": "SWAP2"
+    },
+    "675": {
+      "op": "POP"
+    },
+    "676": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "678": {
+      "op": "DUP5"
+    },
+    "679": {
+      "op": "ADD"
+    },
+    "680": {
+      "op": "CALLDATALOAD"
+    },
+    "681": {
+      "op": "PUSH8",
+      "value": "0xFFFFFFFFFFFFFFFF"
+    },
+    "690": {
+      "op": "DUP1"
+    },
+    "691": {
+      "op": "DUP3"
+    },
+    "692": {
+      "op": "GT"
+    },
+    "693": {
+      "op": "ISZERO"
+    },
+    "694": {
+      "op": "PUSH2",
+      "value": "0x2BE"
+    },
+    "697": {
+      "op": "JUMPI"
+    },
+    "698": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "700": {
+      "op": "DUP1"
+    },
+    "701": {
+      "op": "REVERT"
+    },
+    "702": {
+      "op": "JUMPDEST"
+    },
+    "703": {
+      "op": "DUP2"
+    },
+    "704": {
+      "op": "DUP7"
+    },
+    "705": {
+      "op": "ADD"
+    },
+    "706": {
+      "op": "SWAP2"
+    },
+    "707": {
+      "op": "POP"
+    },
+    "708": {
+      "op": "DUP7"
+    },
+    "709": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "711": {
+      "op": "DUP4"
+    },
+    "712": {
+      "op": "ADD"
+    },
+    "713": {
+      "op": "SLT"
+    },
+    "714": {
+      "op": "PUSH2",
+      "value": "0x2D2"
+    },
+    "717": {
+      "op": "JUMPI"
+    },
+    "718": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "720": {
+      "op": "DUP1"
+    },
+    "721": {
+      "op": "REVERT"
+    },
+    "722": {
+      "op": "JUMPDEST"
+    },
+    "723": {
+      "op": "DUP2"
+    },
+    "724": {
+      "op": "CALLDATALOAD"
+    },
+    "725": {
+      "op": "DUP2"
+    },
+    "726": {
+      "op": "DUP2"
+    },
+    "727": {
+      "op": "GT"
+    },
+    "728": {
+      "op": "ISZERO"
+    },
+    "729": {
+      "op": "PUSH2",
+      "value": "0x2E4"
+    },
+    "732": {
+      "op": "JUMPI"
+    },
+    "733": {
+      "op": "PUSH2",
+      "value": "0x2E4"
+    },
+    "736": {
+      "op": "PUSH2",
+      "value": "0x266"
+    },
+    "739": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "740": {
+      "op": "JUMPDEST"
+    },
+    "741": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "743": {
+      "op": "MLOAD"
+    },
+    "744": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "746": {
+      "op": "DUP3"
+    },
+    "747": {
+      "op": "ADD"
+    },
+    "748": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "750": {
+      "op": "NOT"
+    },
+    "751": {
+      "op": "SWAP1"
+    },
+    "752": {
+      "op": "DUP2"
+    },
+    "753": {
+      "op": "AND"
+    },
+    "754": {
+      "op": "PUSH1",
+      "value": "0x3F"
+    },
+    "756": {
+      "op": "ADD"
+    },
+    "757": {
+      "op": "AND"
+    },
+    "758": {
+      "op": "DUP2"
+    },
+    "759": {
+      "op": "ADD"
+    },
+    "760": {
+      "op": "SWAP1"
+    },
+    "761": {
+      "op": "DUP4"
+    },
+    "762": {
+      "op": "DUP3"
+    },
+    "763": {
+      "op": "GT"
+    },
+    "764": {
+      "op": "DUP2"
+    },
+    "765": {
+      "op": "DUP4"
+    },
+    "766": {
+      "op": "LT"
+    },
+    "767": {
+      "op": "OR"
+    },
+    "768": {
+      "op": "ISZERO"
+    },
+    "769": {
+      "op": "PUSH2",
+      "value": "0x30C"
+    },
+    "772": {
+      "op": "JUMPI"
+    },
+    "773": {
+      "op": "PUSH2",
+      "value": "0x30C"
+    },
+    "776": {
+      "op": "PUSH2",
+      "value": "0x266"
+    },
+    "779": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "780": {
+      "op": "JUMPDEST"
+    },
+    "781": {
+      "op": "DUP2"
+    },
+    "782": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "784": {
+      "op": "MSTORE"
+    },
+    "785": {
+      "op": "DUP3"
+    },
+    "786": {
+      "op": "DUP2"
+    },
+    "787": {
+      "op": "MSTORE"
+    },
+    "788": {
+      "op": "DUP10"
+    },
+    "789": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "791": {
+      "op": "DUP5"
+    },
+    "792": {
+      "op": "DUP8"
+    },
+    "793": {
+      "op": "ADD"
+    },
+    "794": {
+      "op": "ADD"
+    },
+    "795": {
+      "op": "GT"
+    },
+    "796": {
+      "op": "ISZERO"
+    },
+    "797": {
+      "op": "PUSH2",
+      "value": "0x325"
+    },
+    "800": {
+      "op": "JUMPI"
+    },
+    "801": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "803": {
+      "op": "DUP1"
+    },
+    "804": {
+      "op": "REVERT"
+    },
+    "805": {
+      "op": "JUMPDEST"
+    },
+    "806": {
+      "op": "DUP3"
+    },
+    "807": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "809": {
+      "op": "DUP7"
+    },
+    "810": {
+      "op": "ADD"
+    },
+    "811": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "813": {
+      "op": "DUP4"
+    },
+    "814": {
+      "op": "ADD"
+    },
+    "815": {
+      "op": "CALLDATACOPY"
+    },
+    "816": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "818": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "820": {
+      "op": "DUP5"
+    },
+    "821": {
+      "op": "DUP4"
+    },
+    "822": {
+      "op": "ADD"
+    },
+    "823": {
+      "op": "ADD"
+    },
+    "824": {
+      "op": "MSTORE"
+    },
+    "825": {
+      "op": "DUP1"
+    },
+    "826": {
+      "op": "SWAP6"
+    },
+    "827": {
+      "op": "POP"
+    },
+    "828": {
+      "op": "POP"
+    },
+    "829": {
+      "op": "POP"
+    },
+    "830": {
+      "op": "POP"
+    },
+    "831": {
+      "op": "POP"
+    },
+    "832": {
+      "op": "POP"
+    },
+    "833": {
+      "op": "SWAP3"
+    },
+    "834": {
+      "op": "POP"
+    },
+    "835": {
+      "op": "SWAP3"
+    },
+    "836": {
+      "op": "POP"
+    },
+    "837": {
+      "op": "SWAP3"
+    },
+    "838": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "839": {
+      "op": "JUMPDEST"
+    },
+    "840": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "842": {
+      "op": "DUP1"
+    },
+    "843": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "845": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "847": {
+      "op": "DUP5"
+    },
+    "848": {
+      "op": "DUP7"
+    },
+    "849": {
+      "op": "SUB"
+    },
+    "850": {
+      "op": "SLT"
+    },
+    "851": {
+      "op": "ISZERO"
+    },
+    "852": {
+      "op": "PUSH2",
+      "value": "0x35C"
+    },
+    "855": {
+      "op": "JUMPI"
+    },
+    "856": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "858": {
+      "op": "DUP1"
+    },
+    "859": {
+      "op": "REVERT"
+    },
+    "860": {
+      "op": "JUMPDEST"
+    },
+    "861": {
+      "op": "DUP4"
+    },
+    "862": {
+      "op": "CALLDATALOAD"
+    },
+    "863": {
+      "op": "SWAP3"
+    },
+    "864": {
+      "op": "POP"
+    },
+    "865": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "867": {
+      "op": "DUP5"
+    },
+    "868": {
+      "op": "ADD"
+    },
+    "869": {
+      "op": "CALLDATALOAD"
+    },
+    "870": {
+      "op": "SWAP2"
+    },
+    "871": {
+      "op": "POP"
+    },
+    "872": {
+      "op": "PUSH2",
+      "value": "0x373"
+    },
+    "875": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "877": {
+      "op": "DUP6"
+    },
+    "878": {
+      "op": "ADD"
+    },
+    "879": {
+      "op": "PUSH2",
+      "value": "0x24A"
+    },
+    "882": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "883": {
+      "op": "JUMPDEST"
+    },
+    "884": {
+      "op": "SWAP1"
+    },
+    "885": {
+      "op": "POP"
+    },
+    "886": {
+      "op": "SWAP3"
+    },
+    "887": {
+      "op": "POP"
+    },
+    "888": {
+      "op": "SWAP3"
+    },
+    "889": {
+      "op": "POP"
+    },
+    "890": {
+      "op": "SWAP3"
+    },
+    "891": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "892": {
+      "op": "JUMPDEST"
+    },
+    "893": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "895": {
+      "op": "DUP1"
+    },
+    "896": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "898": {
+      "op": "DUP4"
+    },
+    "899": {
+      "op": "DUP6"
+    },
+    "900": {
+      "op": "SUB"
+    },
+    "901": {
+      "op": "SLT"
+    },
+    "902": {
+      "op": "ISZERO"
+    },
+    "903": {
+      "op": "PUSH2",
+      "value": "0x38F"
+    },
+    "906": {
+      "op": "JUMPI"
+    },
+    "907": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "909": {
+      "op": "DUP1"
+    },
+    "910": {
+      "op": "REVERT"
+    },
+    "911": {
+      "op": "JUMPDEST"
+    },
+    "912": {
+      "op": "POP"
+    },
+    "913": {
+      "op": "POP"
+    },
+    "914": {
+      "op": "DUP1"
+    },
+    "915": {
+      "op": "MLOAD"
+    },
+    "916": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "918": {
+      "op": "SWAP1"
+    },
+    "919": {
+      "op": "SWAP2"
+    },
+    "920": {
+      "op": "ADD"
+    },
+    "921": {
+      "op": "MLOAD"
+    },
+    "922": {
+      "op": "SWAP1"
+    },
+    "923": {
+      "op": "SWAP3"
+    },
+    "924": {
+      "op": "SWAP1"
+    },
+    "925": {
+      "op": "SWAP2"
+    },
+    "926": {
+      "op": "POP"
+    },
+    "927": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "928": {
+      "op": "JUMPDEST"
+    },
+    "929": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "931": {
+      "op": "DUP3"
+    },
+    "932": {
+      "op": "MLOAD"
+    },
+    "933": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "935": {
+      "op": "JUMPDEST"
+    },
+    "936": {
+      "op": "DUP2"
+    },
+    "937": {
+      "op": "DUP2"
+    },
+    "938": {
+      "op": "LT"
+    },
+    "939": {
+      "op": "ISZERO"
+    },
+    "940": {
+      "op": "PUSH2",
+      "value": "0x3C1"
+    },
+    "943": {
+      "op": "JUMPI"
+    },
+    "944": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "946": {
+      "op": "DUP2"
+    },
+    "947": {
+      "op": "DUP7"
+    },
+    "948": {
+      "op": "ADD"
+    },
+    "949": {
+      "op": "DUP2"
+    },
+    "950": {
+      "op": "ADD"
+    },
+    "951": {
+      "op": "MLOAD"
+    },
+    "952": {
+      "op": "DUP6"
+    },
+    "953": {
+      "op": "DUP4"
+    },
+    "954": {
+      "op": "ADD"
+    },
+    "955": {
+      "op": "MSTORE"
+    },
+    "956": {
+      "op": "ADD"
+    },
+    "957": {
+      "op": "PUSH2",
+      "value": "0x3A7"
+    },
+    "960": {
+      "op": "JUMP"
+    },
+    "961": {
+      "op": "JUMPDEST"
+    },
+    "962": {
+      "op": "DUP2"
+    },
+    "963": {
+      "op": "DUP2"
+    },
+    "964": {
+      "op": "GT"
+    },
+    "965": {
+      "op": "ISZERO"
+    },
+    "966": {
+      "op": "PUSH2",
+      "value": "0x3D0"
+    },
+    "969": {
+      "op": "JUMPI"
+    },
+    "970": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "972": {
+      "op": "DUP3"
+    },
+    "973": {
+      "op": "DUP6"
+    },
+    "974": {
+      "op": "ADD"
+    },
+    "975": {
+      "op": "MSTORE"
+    },
+    "976": {
+      "op": "JUMPDEST"
+    },
+    "977": {
+      "op": "POP"
+    },
+    "978": {
+      "op": "SWAP2"
+    },
+    "979": {
+      "op": "SWAP1"
+    },
+    "980": {
+      "op": "SWAP2"
+    },
+    "981": {
+      "op": "ADD"
+    },
+    "982": {
+      "op": "SWAP3"
+    },
+    "983": {
+      "op": "SWAP2"
+    },
+    "984": {
+      "op": "POP"
+    },
+    "985": {
+      "op": "POP"
+    },
+    "986": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "8c278ce7998df0bbee3d1e9fd4ca13736bdb1286",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol\";\nimport \"@chainlink/contracts/src/v0.8/VRFConsumerBase.sol\";\n\ncontract VRFCoordinatorMock {\n    LinkTokenInterface public LINK;\n\n    event RandomnessRequest(\n        address indexed sender,\n        bytes32 indexed keyHash,\n        uint256 indexed seed\n    );\n\n    constructor(address linkAddress) {\n        LINK = LinkTokenInterface(linkAddress);\n    }\n\n    function onTokenTransfer(\n        address sender,\n        uint256 fee,\n        bytes memory _data\n    ) public onlyLINK {\n        (bytes32 keyHash, uint256 seed) = abi.decode(_data, (bytes32, uint256));\n        emit RandomnessRequest(sender, keyHash, seed);\n    }\n\n    function callBackWithRandomness(\n        bytes32 requestId,\n        uint256 randomness,\n        address consumerContract\n    ) public {\n        VRFConsumerBase v;\n        bytes memory resp = abi.encodeWithSelector(\n            v.rawFulfillRandomness.selector,\n            requestId,\n            randomness\n        );\n        uint256 b = 206000;\n        require(gasleft() >= b, \"not enough gas for consumer\");\n        (bool success, ) = consumerContract.call(resp);\n    }\n\n    modifier onlyLINK() {\n        require(msg.sender == address(LINK), \"Must use LINK token\");\n        _;\n    }\n}\n",
+  "sourceMap": "192:1150:6:-:0;;;394:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;437:4;:38;;-1:-1:-1;;;;;;437:38:6;-1:-1:-1;;;;;437:38:6;;;;;;;;;;192:1150;;14:290:7;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:7;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:7:o;:::-;192:1150:6;;;;;;",
+  "sourcePath": "contracts/test/VRFCoordinatorMock.sol",
+  "type": "contract"
+}

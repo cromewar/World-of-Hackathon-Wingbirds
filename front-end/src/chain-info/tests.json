@@ -1,0 +1,13 @@
+{
+  "contracts": {
+    "LinkToken": "49e7bae2df618e81d877632c6ad55872ff2ce801",
+    "VRFCoordinatorMock": "50b10027797b93250cffdfccb9eaa7b52fcfd1b9",
+    "Wingbird": "2b346b267fcc83458cc331c2df9779f2cdfbd2d6",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/BasicToken": "92084ac5279a2a3db988d9e01d7e6d3e3a4dab8d",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/SafeMathChainlink": "bf84f5dba942291289c80f271862cb515ce813ab",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/StandardToken": "7f21b0e2f1d1fcf89f4466183c9e73bc3cf77276",
+    "smartcontractkit/chainlink-brownie-contracts@0.3.1/VRFRequestIDBase": "73df0a6f5d0123eb2b2db0faf62b602aa77c123a"
+  },
+  "tests": {},
+  "tx": {}
+}

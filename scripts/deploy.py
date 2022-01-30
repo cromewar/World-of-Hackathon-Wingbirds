@@ -1,5 +1,11 @@
 from brownie import Wingbird
-from scripts.helpful_scripts import get_account
+from scripts.helpful_scripts import (
+    get_account,
+    get_contract,
+    fund_with_link,
+    config,
+    network,
+)
 import os
 import shutil
 import yaml
@@ -8,10 +14,22 @@ import json
 
 def deploy_wingbird(update_front_end=False):
     account = get_account()
-    wingbird = Wingbird.deploy({"from": account})
+    wingbird = Wingbird.deploy(
+        get_contract("vrf_coordinator").address,
+        get_contract("link_token").address,
+        config["networks"][network.show_active()]["fee"],
+        config["networks"][network.show_active()]["keyhash"],
+        {"from": account},
+        publish_source=config["networks"][network.show_active()].get("verify", False),
+    )
 
-    if update_frontend:
+    tx = fund_with_link(wingbird.address)
+    tx.wait(1)
+
+    if update_front_end:
         update_frontend()
+
+    return wingbird
 
 
 def update_frontend():
