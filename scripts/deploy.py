@@ -49,4 +49,4 @@ def copy_folder_to_frontend(src, dest):
 
 
 def main():
-    deploy_wingbird()
+    deploy_wingbird(update_front_end=True)
