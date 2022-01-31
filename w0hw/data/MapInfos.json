@@ -1,8 +1,8 @@
 [
 null,
-{"id":1,"expanded":true,"name":"MAP001","order":1,"parentId":0,"scrollX":648.4,"scrollY":359.6},
+{"id":1,"expanded":true,"name":"MAP001","order":1,"parentId":0,"scrollX":648.4,"scrollY":366},
 {"id":2,"expanded":true,"name":"World 0","order":2,"parentId":1,"scrollX":5414,"scrollY":1224.4},
-{"id":3,"expanded":false,"name":"School","order":5,"parentId":2,"scrollX":648.4,"scrollY":727.6},
+{"id":3,"expanded":false,"name":"School","order":5,"parentId":2,"scrollX":654.8,"scrollY":727.6},
 {"id":4,"expanded":false,"name":"Castle","order":3,"parentId":2,"scrollX":1074,"scrollY":1786},
 {"id":5,"expanded":true,"name":"PvP","order":4,"parentId":2,"scrollX":648.4,"scrollY":366},
 {"id":6,"expanded":false,"name":"Chinese Restaurant","order":6,"parentId":2,"scrollX":654.8,"scrollY":526}
