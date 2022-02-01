@@ -3,7 +3,7 @@ import React from 'react';
 
 // export default ({ url, background="black", className="video" }) => {
 export const GameFrame = () => {
-  let url = 'https://ipfs.io/ipfs/QmXqNaPkWoEDn6b2wvgMoGQBwSYtf9KywDbEZvRZnnuH2x'
+  let url = 'https://ipfs.io/ipfs/QmQJEVQQtCDdCntEDQadeypZfkwngRusN7TXDRiUPmwU1G'
 
   return (
     <div
