@@ -5,6 +5,8 @@
 Things happen. Harddrives crash. We get busy, priorities change.  Technologies move forward.  Teams build.  
 > How many great projects, ideas, and team dreams die on the vine?
 
+## [Checkout our Duck Deck](https://docs.google.com/presentation/d/1FysFroMA5JVOjpp3dHZc33gwIGsLrgLiUEcyiEJBUjM/edit?usp=sharing)
+
 We wanted to build something, a platform, a game, and a structure to attack the problem of teambuilding:
 1. minimize trust requirements
 2. increase fun and accessibility
