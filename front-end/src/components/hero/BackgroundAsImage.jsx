@@ -81,7 +81,7 @@ export const HeroSection = () => {
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="https://ipfs.io/ipfs/QmR12W9NSUT8sRmAkhTAHmWnmLiZAHfKRqFCanbjec21Ei" target="_blank">
-      Diamond Idea
+        Diamond Idea
       </NavLink>
       <NavLink href="https://ipfs.io/ipfs/QmR12W9NSUT8sRmAkhTAHmWnmLiZAHfKRqFCanbjec21Ei">
         Tools for Birds
@@ -112,7 +112,7 @@ export const HeroSection = () => {
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
-              url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
+              url="https://youtu.be/1pgHzvYKdos"
               background="transparent"
             />
           </RightColumn>
