@@ -3,30 +3,31 @@ import React from 'react';
 
 // export default ({ url, background="black", className="video" }) => {
 export const GameFrame = () => {
-    let url = 'https://ipfs.io/ipfs/QmUdAvkZwZM8qoqmDdQV3EYmmHZt9zu9bpNwXHJg9QkTMx'
+  let url = 'https://ipfs.io/ipfs/QmXqNaPkWoEDn6b2wvgMoGQBwSYtf9KywDbEZvRZnnuH2x'
+
   return (
     <div
-    //   className={className}
+      //   className={className}
       style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         //   marginTop: '-600px',
-          zIndex: 100,
-          background: 'black',
-    //     position: "relative",
-    //     background: background,
-    //     paddingBottom: "56.25%" /* 16:9 */,
-    //     paddingTop: 25,
-    //     height: 0
+        zIndex: 100,
+        background: 'black',
+        //     position: "relative",
+        //     background: background,
+        //     paddingBottom: "56.25%" /* 16:9 */,
+        //     paddingTop: 25,
+        //     height: 0
       }}
     >
       <iframe
         title="Embeded Video"
         style={{
-        //   position: "absolute",
-        //   top: 0,
-        //   left: 0,
+          //   position: "absolute",
+          //   top: 0,
+          //   left: 0,
           width: "900px",
           height: "700px"
         }}
