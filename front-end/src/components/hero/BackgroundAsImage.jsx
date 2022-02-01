@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { GameFrame } from "components/game/GameFrame.js";
+// import { Modal } from 'antd'
+
 
 
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -18,7 +21,7 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("https://bafybeic3oagnurlzkq23aqgmivfceibvll3pzdmr2da3gebzwovoiuwps4.ipfs.dweb.link/Screen%20Shot%202022-01-31%20at%2010.21.35%20PM.png");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
@@ -56,20 +59,35 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   }
 `;
 
+
 export const HeroSection = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const handleModal = () => {
+    setIsModalVisible(true);
+  }
+
+  const handleOk = () => { //modal. should abs
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => { //modal. should abs
+    setIsModalVisible(false);
+  };
+
+  const modalStyles = {
+    display: isModalVisible ? "block" : 'none',
+  }
+
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
-        Organizers
+      <NavLink href="https://ipfs.io/ipfs/QmR12W9NSUT8sRmAkhTAHmWnmLiZAHfKRqFCanbjec21Ei" target="_blank">
+      Diamond Idea
       </NavLink>
-      <NavLink href="#">
-        Hackers
+      <NavLink href="https://ipfs.io/ipfs/QmR12W9NSUT8sRmAkhTAHmWnmLiZAHfKRqFCanbjec21Ei">
+        Tools for Birds
       </NavLink>
-      <NavLink href="#">
-        Collaborator
-      </NavLink>
-      <NavLink href="#">
-        About
+      <NavLink href="https://docs.google.com/presentation/d/1FysFroMA5JVOjpp3dHZc33gwIGsLrgLiUEcyiEJBUjM/edit?usp=sharing">
+        Duck Deck
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
@@ -85,11 +103,12 @@ export const HeroSection = () => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
+              <span>Hackathon RPG</span>
               <span>Team Building</span>
               <br />
-              <SlantedBackground>Made easy.</SlantedBackground>
+              <SlantedBackground>For Birds.</SlantedBackground>
             </Heading>
-            <PrimaryAction>Start your Journey</PrimaryAction>
+            <PrimaryAction onClick={handleModal}>Learn to Fly</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
