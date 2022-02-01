@@ -3,13 +3,17 @@
 
 import { HeroSection } from 'components/hero/BackgroundAsImage'
 import AnimationRevealPage from "helpers/AnimationRevealPage"
+import { GameFrame } from 'components/game/GameFrame';
 
 function App() {
   return (
     <div className="App">
-      <AnimationRevealPage>
+      {/* <AnimationRevealPage> */}
         <HeroSection />
-      </AnimationRevealPage>
+      {/* </AnimationRevealPage> */}
+      {/* <AnimationRevealPage> */}
+        <GameFrame/>
+      {/* </AnimationRevealPage> */}
 
     </div>
   );
