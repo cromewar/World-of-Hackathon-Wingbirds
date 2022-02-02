@@ -2,8 +2,7 @@
 
 > [web3's newest trusty tool for hackthon team building.](https://tippi-fifestarr.github.io/Ultimate-Blockchain-Productivity-Platform/w0hw/)
 
-## Live Page
-You can checkout a live demo of the projec [here](https://twilight-dust-2356.on.fleek.co/).
+## Live demo of the project [here](https://twilight-dust-2356.on.fleek.co/).
 
 
 
